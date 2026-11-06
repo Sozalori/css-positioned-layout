@@ -1,1 +1,109 @@
-/* Start coding here */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Sarabun", sans-serif;
+    background-color: white;
+}
+
+/* Header */
+.header {
+    height: 51px;
+    background-color: gray;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    padding: 6px 10px;
+}
+
+/* Chatroom */
+.chatroom {
+    position: relative;
+    min-height: calc(100vh - 51px);
+}
+
+/* Right messages */
+.right-messages {
+    position: absolute;
+    top: 29px;
+    right: 17px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Left messages */
+.left-messages {
+    position: absolute;
+    top: 167px;
+    left: 17px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Message */
+.message {
+    width: 177px;
+    min-height: 38px;
+    border-radius: 25px;
+    padding: 8px 13px;
+    font-size: 14px;
+}
+
+/* Green message */
+.green-message {
+    background-color: #00c516;
+    color: black;
+
+    position: relative;
+}
+
+/* Green message tail */
+.green-message:first-child::after {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    right: -1px;
+
+    width: 0;
+    height: 0;
+
+    border-top: 12px solid #00c516;
+    border-left: 8px solid transparent;
+}
+
+/* Gray message */
+.gray-message {
+    background-color: #e5e5e5;
+    color: black;
+}
+
+/* Close button */
+.gray-message {
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 0;
+    right: -4px;
+
+    width: 18px;
+    height: 18px;
+
+    border: none;
+    border-radius: 50%;
+    background-color: #c7c7c7;
+    color: white;
+
+    font-size: 11px;
+    cursor: pointer;
+}
